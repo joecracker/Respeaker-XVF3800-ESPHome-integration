@@ -20,5 +20,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: respeaker-firmware
-          path: config/.esphome/build/respeaker-xvf3800-assistant/.pioenvs/respeaker-xvf3800-assistant/firmware.bin
+          path: config/.esphome/build/respeaker-xvf3800-assistant/.pioenvs/respeaker-xvf3800-assistant/firmware-factory.bin
           if-no-files-found: warn
