@@ -16,12 +16,9 @@ jobs:
           yaml-file: config/respeaker-xvf-satellite-example.yaml
           version: 2026.5.3
 
-      - name: List build files
-        run: find config/.esphome -name "*.bin" 2>/dev/null || echo "No bin files found"
-
       - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
           name: respeaker-firmware
-          path: config/.esphome/
+          path: config/.esphome/build/respeaker-xvf3800-assistant/.pioenvs/respeaker-xvf3800-assistant/firmware.factory.bin
           if-no-files-found: warn
