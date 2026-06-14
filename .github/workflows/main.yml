@@ -1,0 +1,23 @@
+name: Build ESPHome Firmware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ESPHome firmware
+        uses: esphome/build-action@v6
+        with:
+          yaml-file: config/respeaker-xvf-satellite-example.yaml
+          version: 2026.5.3
+
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: respeaker-firmware
+          path: build/
