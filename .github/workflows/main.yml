@@ -20,4 +20,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: respeaker-firmware
-          path: build/
+          path: respeaker-xvf3800-assistant/
+          if-no-files-found: warn
