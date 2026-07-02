@@ -1451,6 +1451,7 @@ micro_wake_word:
       internal: true
     - model: https://raw.githubusercontent.com/TaterTotterson/microWakeWords/refs/heads/main/microWakeWordsV3/hey_anna.json
       id: hey_anna
+      probability_cutoff: 0.9
   vad:
     probability_cutoff: 0.05
   on_wake_word_detected:
